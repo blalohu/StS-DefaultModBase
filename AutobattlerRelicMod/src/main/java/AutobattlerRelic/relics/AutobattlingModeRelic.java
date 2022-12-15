@@ -23,7 +23,7 @@ public class AutobattlingModeRelic extends CustomRelic {
      */
 
     // ID, images, text.
-    public static final String ID = AutobattlerRelicMod.makeID("Autobattling Mode");
+    public static final String ID = AutobattlerRelicMod.makeID("AutobattlingMode");
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic2.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic2.png"));
