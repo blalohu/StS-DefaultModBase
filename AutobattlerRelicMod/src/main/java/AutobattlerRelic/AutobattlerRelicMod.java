@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -65,7 +66,8 @@ public class AutobattlerRelicMod implements
         EditStringsSubscriber,
         EditKeywordsSubscriber,
         PostInitializeSubscriber,
-        PostCreateStartingRelicsSubscriber {
+        PostCreateStartingRelicsSubscriber
+         {
     // Make sure to implement the subscribers *you* are using (read basemod wiki). Editing cards? EditCardsSubscriber.
     // Making relics? EditRelicsSubscriber. etc., etc., for a full list and how to make your own, visit the basemod wiki.
     public static final Logger logger = LogManager.getLogger(AutobattlerRelicMod.class.getName());
@@ -270,10 +272,10 @@ public class AutobattlerRelicMod implements
 */
         logger.info("Done loading badge Image and mod options");
     }
-    
-    // =============== / POST-INITIALIZE/ =================
-    
-    // ================ ADD RELICS ===================
+
+             // =============== / POST-INITIALIZE/ =================
+
+             // ================ ADD RELICS ===================
     
     @Override
     public void receiveEditRelics() {
@@ -286,10 +288,11 @@ public class AutobattlerRelicMod implements
     }
     public void receivePostCreateStartingRelics(AbstractPlayer.PlayerClass playerClass, ArrayList<String> relicsToAdd) {
 //        if (enableRelicStart = true) {    // Again, figuring out buttons, for now the if and {} will be commented out.
-            relicsToAdd.add("Autobattling Mode");
-            UnlockTracker.markRelicAsSeen("Autobattling Mode");
+            relicsToAdd.add(AutobattlingModeRelic.ID);
+            UnlockTracker.markRelicAsSeen(AutobattlingModeRelic.ID);
             //       }
     }
+
 
 
 

@@ -10,7 +10,7 @@
     "NAME": "Autobattling Mode",
     "FLAVOR": "RNGesus take the wheel.",
     "DESCRIPTIONS": [
-      "At the start of each turn, play the top 5 cards of your deck, plus 1 more for each master energy over 3.NLBy default you draw no cards at turn start."
+      "At the start of each turn, play the top 5 cards of your deck, plus 1 more for each master energy over 3.\nBy default you draw no cards at turn start."
     ]
   },
   "AutobattlerRelicMod:DefaultClickableRelic": {
